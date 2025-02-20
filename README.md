@@ -13,17 +13,19 @@
 
 ## 部署步骤
 
-### 1. 安装 Ollama
+
 
 ```bash
+1. 安装 Ollama
 # Windows 安装
-# 1. 下载 Ollama 安装包
+# 下载 Ollama 安装包
 访问 https://ollama.ai/download 下载 Windows 安装包
 
-# 2. 运行安装包完成安装
+# 运行安装包完成安装
 
 # Linux 安装
 curl -fsSL https://ollama.ai/install.sh | sh
+
 2. 下载 qwen2.5 模型
 # 打开终端运行
 ollama pull qwen2.5:latest
@@ -33,7 +35,6 @@ ollama pull qwen2.5:latest
 python -m venv venv
 source venv/bin/activate  # Linux
 venv\Scripts\activate     # Windows
-
 # 安装依赖
 pip install -r requirements.txt
 
