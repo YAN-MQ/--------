@@ -1,2 +1,6 @@
 request
 dotenv
+python-docx
+python-pptx
+pandas
+PyPDF2

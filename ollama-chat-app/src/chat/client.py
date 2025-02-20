@@ -5,6 +5,7 @@ from config.settings import OLLAMA_BASE_URL, MODEL_NAME, MODEL_PARAMS
 from utils.logger import log_error, log_info
 from .models import ChatResponse, ChatContext, Message
 from utils.memory import MemoryManager
+from utils.knowledge import KnowledgeBase
 class OllamaClient:
     def __init__(self):
         self.base_url = OLLAMA_BASE_URL
@@ -12,9 +13,20 @@ class OllamaClient:
         self.context = ChatContext()
         self.params = MODEL_PARAMS
         self.memory_manager = MemoryManager()
+        self.knowledge_base = KnowledgeBase()
 
     def chat_stream(self, message: str) -> Generator[str, None, None]:
         try:
+            # 获取相关知识
+            relevant_knowledge = self.knowledge_base.get_relevant_knowledge(message)
+            if relevant_knowledge:
+                context = f"基于以下知识来回答问题:\n{relevant_knowledge}\n\n用户问题: {message}"
+            else:
+                context = message
+                
+            # 将知识添加到上下文
+            self.context.add_message("user", context)
+            
             # 获取相关记忆
             relevant_memories = self.memory_manager.get_relevant_memories(message)
             memory_context = self._format_memories(relevant_memories)
@@ -73,10 +85,10 @@ class OllamaClient:
         if not memories:
             return ""
             
-        context = "以下是相关的历史对话记忆:\n\n"
+        context = "以下是相关的历史对话记忆:"
         for memory in memories:
-            context += f"用户: {memory['user_input']}\n"
-            context += f"助手: {memory['assistant_response']}\n\n"
+            context += f"用户: {memory['user_input']} 助手: {memory['assistant_response']} "
+            
         return context
 
     def clear_context(self):

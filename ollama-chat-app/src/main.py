@@ -16,8 +16,9 @@ def main():
     print("\n命令说明:")
     print("- 输入 'quit' 退出程序")
     print("- 输入 'clear' 清除对话历史")
-    print("- 按 Ctrl+C 强制退出\n")
     print("- 输入 'memory' 查看存储的记忆")
+    print("- 输入 'upload <文件路径>' 上传知识库文件")
+    print("- 按 Ctrl+C 强制退出\n")
     
     while True:
         try:
@@ -25,7 +26,15 @@ def main():
             
             if not user_input:  # 忽略空输入
                 continue
-                
+
+            if user_input.lower().startswith('upload '):
+                file_path = user_input[7:].strip()
+                if client.knowledge_base.add_file(file_path):
+                    print(f"\n系统: 成功添加文件到知识库: {file_path}")
+                else:
+                    print("\n系统: 添加文件失败")
+                continue
+
             if user_input.lower() == 'quit':
                 break
             elif user_input.lower() == 'clear':
