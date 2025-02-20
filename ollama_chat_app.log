@@ -1,0 +1,41 @@
+2025-02-15 12:03:33,842 - INFO - Chat application started
+2025-02-15 12:06:39,308 - INFO - Chat application started
+2025-02-15 12:06:42,763 - INFO - Received response from model
+2025-02-15 12:06:54,701 - INFO - Received response from model
+2025-02-15 12:07:49,786 - INFO - Chat application started
+2025-02-15 12:07:56,395 - ERROR - JSON解析错误: Extra data: line 2 column 1 (char 98)
+2025-02-15 12:08:13,962 - INFO - Chat application started
+2025-02-15 12:08:17,444 - ERROR - JSON解析错误: Extra data: line 2 column 1 (char 100)
+2025-02-15 12:08:20,119 - ERROR - JSON解析错误: Extra data: line 2 column 1 (char 100)
+2025-02-15 12:08:33,425 - INFO - Chat application started
+2025-02-15 12:08:35,483 - INFO - Received response from model
+2025-02-15 12:11:24,690 - INFO - Chat application started
+2025-02-15 12:11:28,127 - INFO - Received response from model
+2025-02-15 12:11:59,032 - INFO - Chat application started
+2025-02-15 12:12:02,493 - INFO - Received response from model
+2025-02-15 12:19:43,882 - INFO - Chat application started
+2025-02-15 12:20:45,221 - INFO - Chat application started
+2025-02-15 12:22:25,986 - INFO - Chat application started
+2025-02-15 12:24:16,870 - INFO - Chat application started
+2025-02-15 12:28:32,596 - INFO - Chat application started
+2025-02-15 12:34:48,392 - INFO - Chat application started
+2025-02-15 12:37:06,715 - INFO - Chat application started
+2025-02-15 12:41:52,440 - INFO - Chat application started
+2025-02-15 15:27:29,750 - INFO - Chat application started
+2025-02-15 15:27:36,446 - ERROR - 错误: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000272CC87CD00>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-02-15 15:28:04,692 - INFO - Chat application started
+2025-02-15 17:15:41,541 - INFO - Chat application started
+2025-02-15 17:17:02,390 - INFO - Chat application started
+2025-02-15 17:18:32,125 - INFO - Chat application started
+2025-02-15 17:19:22,093 - INFO - Chat application started
+2025-02-15 17:19:39,737 - INFO - Chat application started
+2025-02-15 17:21:01,160 - INFO - Chat application started
+2025-02-15 17:22:13,076 - INFO - Chat application started
+2025-02-15 17:25:11,036 - INFO - Chat application started
+2025-02-15 19:39:38,900 - INFO - Chat application started
+2025-02-15 19:40:27,498 - INFO - Chat application started
+2025-02-15 19:42:29,016 - INFO - Chat application started
+2025-02-20 22:31:27,091 - INFO - Chat application started
+2025-02-20 22:40:02,226 - INFO - Chat application started
+2025-02-20 22:43:19,920 - INFO - Chat application started
+2025-02-20 22:47:31,999 - INFO - Chat application started
